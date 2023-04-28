@@ -1,9 +1,20 @@
 
 
-export function PropsPassing(props) {
+export function PropsPassingasFunction({ PlaceDetails }) {
+
+    const {
+        name,
+        age,
+        place,
+        district,
+    } = PlaceDetails
+
     return (
         <>
-            <button>{props.btnname}</button>
+            <button>{name}</button>
+            <button>{age}</button>
+            <button>{place}</button>
+            <button>{district}</button>
         </>
     )
 }

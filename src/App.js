@@ -1,13 +1,27 @@
 
 import './App.css';
-import { PropsPassing } from './Components/props/props';
+import { PropsPassingasFunction } from './Components/props/props';
+
 
 function App() {
+
+  let Informations = {
+    name:"manish",
+    age:'22',
+    place:"Odisha",
+    district:"Balasore" ,
+  }
+  
+  
   return (
     <div className="App">
-      <PropsPassing btnname="Submit Here" />
-      <PropsPassing btnname = "Don't Submit Here"/>
-      <PropsPassing btnname = " Submit Now"/>
+      <PropsPassingasFunction
+       PlaceDetails = {Informations} />
+       
+      <PropsPassingasFunction
+       PlaceDetails = {Informations} />
+      <PropsPassingasFunction
+       PlaceDetails = {Informations} />
     </div>
   );
 }
