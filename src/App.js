@@ -1,27 +1,40 @@
 
 import './App.css';
-import { PropsPassingasFunction } from './Components/props/props';
+// import { PropsPassingasFunction } from './Components/props/props';
 
 
 function App() {
 
-  let Informations = {
-    name:"manish",
-    age:'22',
-    place:"Odisha",
-    district:"Balasore" ,
+  let Informations = [{
+    id: '1',
+    name: "manish",
+    age: '22',
+    place: "Odisha",
+    district: "Balasore",
+  },
+  {
+    id: '2',
+    name: "manish",
+    age: '22',
+    place: "Odisha",
+    district: "Balasore",
   }
-  
-  
+  ]
+
   return (
     <div className="App">
-      <PropsPassingasFunction
-       PlaceDetails = {Informations} />
-       
-      <PropsPassingasFunction
-       PlaceDetails = {Informations} />
-      <PropsPassingasFunction
-       PlaceDetails = {Informations} />
+      <ul>
+
+        {Informations.map((element) => (
+          <li key={element.id} >
+            <h1>{element.name}</h1>
+            <h1>{element.age}</h1>
+          </li>
+        ))}
+
+      </ul>
+
+
     </div>
   );
 }

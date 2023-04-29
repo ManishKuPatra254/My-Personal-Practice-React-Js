@@ -1,6 +1,10 @@
 
 
-export function PropsPassingasFunction({ PlaceDetails }) {
+export function PropsPassingasFunction({ PlaceDetails , elements }) {
+
+    function handleClick(){
+        alert(`My name is Manish ${elements}`)
+    }
 
     const {
         name,
@@ -11,7 +15,7 @@ export function PropsPassingasFunction({ PlaceDetails }) {
 
     return (
         <>
-            <button>{name}</button>
+            <button  onClick={handleClick} >{name}</button>
             <button>{age}</button>
             <button>{place}</button>
             <button>{district}</button>
